@@ -1,19 +1,18 @@
 {% extends "layout.html" %}
 {% block content %}
-<main>
+<div class="box">
+    {% if label and score %}
+        <p>セリフ「{{ quote }}」は</p>
+        <p> {{ label }} なセリフです。 </p>
+        <p>{{ label }}度合いは{{ score }}です</p>
+    {% else %}
+        <h2>数字を入力してください</h2>
+    {% endif %}
+</div>
+{% if closest_word %}
     <div class="box">
-        {% if label and score %}
-            <p class="result">セリフ{{ quote }}は</p>
-            <p class="result"> {{ label }} なセリフです。 </p>
-            <p class="result">{{ label }}度合いは{{ score }}です</p>
-        {% else %}
-            <h2 class="result">数字を入力してください</h2>
-        {% endif %}
+        <h2>似ているセリフは</h2>
+        <p>「{{closest_word}}」</p>
     </div>
-        {% if closestWord %}
-                <div class="box">
-                    <h2 class="result">似ているセリフは「{{closestWord}}」です。</h2>
-                </div>
-        {% endif %}
-</main>
+{% endif %}
 {% endblock %}

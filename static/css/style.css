@@ -1,21 +1,21 @@
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    margin: 0;
     font-family: "Hiragino Sans W3", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
     background-color: antiquewhite;
 }
+
 header {
     height: 60px;
     width: 100%;
     padding: 0px 15px;
     background-color: rgba(115, 210, 230);
-    position: fixed;
-    top: 0;
-    z-index: 10;
     display: flex;
+    justify-content: space-between;
 }
 
 .logo {
@@ -23,14 +23,8 @@ header {
 }
 
 nav {
-    margin: 0 0 0 auto;
-}
-
-ul {
     display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    justify-content: space-evenly;
 }
 
 a {
@@ -45,11 +39,13 @@ main {
     padding: 60px;
     text-align: center;
     width: 100%;
-    margin: auto;
     top: 0;
 }
 
 .content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     box-sizing: border-box;
     width: 50%;
     background-color: #fff;
@@ -64,7 +60,6 @@ main {
     margin: 5px 0 0;
     padding: 10px;
     background-color: rgb(115, 211, 230);
-    ;
     border-radius: 8px;
     font-size: 15px;
 }
@@ -98,7 +93,7 @@ main {
     background-color: rgb(250, 90, 90);
 }
 
-.calc_btn [type="submit"] {
+.calc_btn {
     cursor: pointer;
     text-align: center;
     font-size: 18px;
@@ -112,7 +107,7 @@ main {
     border-radius: 5px;
 }
 
-.calc_btn [type="submit"]:hover {
+.calc_btn:hover {
     background: #985267;
 }
 
@@ -127,28 +122,19 @@ main {
     border: solid;
 }
 
-.result {
+.box p {
     font-weight: bold;
     color: rgb(246, 123, 123);
     font-size: 24px;
 }
 
-/* *********************************　
-  footerの設定
-  *********************************** */
+/* footerの設定 */
 footer {
     width: 100%;
-    /* 幅いっぱいを指定 */
     height: 50px;
-    /* 高さを指定 */
-    display: inline-block;
     background: rgba(115, 210, 230);
-    /* 背景色を指定 */
     text-align: center;
     position: absolute;
     bottom: 0;
-}
-
-.footer_logo {
     line-height: 50px;
 }
